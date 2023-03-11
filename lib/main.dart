@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app/config/basic_color.dart';
-
-import 'package:flutter_app/pages/start_page.dart';
+import 'package:flutter_app/pages/onboarding.dart';
+import 'package:flutter_app/theme.dart';
 
 void main() => runApp(const App());
 
@@ -11,20 +10,10 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: '_dou',
-      home: const StartPage(),
-      theme: ThemeData(
-        scaffoldBackgroundColor: BasicColors.page,
-        canvasColor: BasicColors.nav,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: BasicColors.nav,
-        ),
-        bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-          backgroundColor: BasicColors.nav,
-          selectedItemColor: BasicColors.active,
-          unselectedItemColor: BasicColors.unactive,
-        ),
-      ),
+      title: 'Chat App',
+      home: const OnBoarding(),
+      theme: lightTheme(context),
+      darkTheme: darkTheme(context),
     );
   }
 }
