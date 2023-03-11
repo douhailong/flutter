@@ -40,7 +40,10 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
         title: const TopNavBar(),
         // bottom: TabBar(tabs: []),
       ),
-      body: const Text('home page'),
+      body: GestureDetector(
+        onTap: () => {Navigator},
+        child: const Text('home page'),
+      ),
     );
   }
 }
